@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44aa7f01-6db0-4d59-964a-d0c338bf0fe4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/validate_util.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/function/ccb_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/function/ccb_function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tu.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/main_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/tu.png" beforeDir="false" afterPath="$PROJECT_DIR$/ui/tu.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/val.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +53,7 @@
       <recent name="D:\python space\phone_extract\function" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main_window">
+  <component name="RunManager" selected="Python.main">
     <configuration name="ccb_function" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="phone_extract" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -128,9 +122,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.main_window" />
         <item itemvalue="Python.ccb_function" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -165,8 +159,16 @@
       <workItem from="1585209230250" duration="4185000" />
       <workItem from="1585213534500" duration="2293000" />
       <workItem from="1585269281961" duration="1440000" />
-      <workItem from="1585271341815" duration="3006000" />
+      <workItem from="1585271341815" duration="3316000" />
     </task>
+    <task id="LOCAL-00001" summary="完善逻辑">
+      <created>1585274411134</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585274411134</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,36 +176,38 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="完善逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善逻辑" />
   </component>
   <component name="WindowStateProjectService">
     <state x="857" y="218" key="#Notifications" timestamp="1585209105738">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="857" y="218" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1585209105738" />
-    <state x="580" y="118" key="CommitChangelistDialog2" timestamp="1585274304690">
+    <state x="580" y="118" key="CommitChangelistDialog2" timestamp="1585274409162">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="580" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585274304689" />
+    <state x="580" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585274409162" />
     <state x="187" y="88" key="DiffContextDialog" timestamp="1585274303201">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="187" y="88" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585274303201" />
-    <state width="937" height="224" key="GridCell.Tab.0.bottom" timestamp="1585274353504">
+    <state width="937" height="224" key="GridCell.Tab.0.bottom" timestamp="1585274657050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="937" height="224" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585274353504" />
-    <state width="937" height="224" key="GridCell.Tab.0.center" timestamp="1585274353504">
+    <state width="937" height="224" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585274657050" />
+    <state width="937" height="224" key="GridCell.Tab.0.center" timestamp="1585274657050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="937" height="224" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585274353504" />
-    <state width="937" height="224" key="GridCell.Tab.0.left" timestamp="1585274353503">
+    <state width="937" height="224" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585274657050" />
+    <state width="937" height="224" key="GridCell.Tab.0.left" timestamp="1585274657049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="937" height="224" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585274353503" />
-    <state width="937" height="224" key="GridCell.Tab.0.right" timestamp="1585274353504">
+    <state width="937" height="224" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585274657049" />
+    <state width="937" height="224" key="GridCell.Tab.0.right" timestamp="1585274657050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="937" height="224" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585274353504" />
+    <state width="937" height="224" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585274657050" />
     <state width="853" height="225" key="GridCell.Tab.1.bottom" timestamp="1585214366815">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -224,6 +228,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="402" y="189" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585211461606" />
+    <state x="553" y="256" key="Vcs.Push.Dialog.v2" timestamp="1585274414424">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="553" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585274414424" />
     <state x="656" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1585271387136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -236,6 +244,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/phone_extract$main_window.coverage" NAME="main_window Coverage Results" MODIFIED="1585274353497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui" />
     <SUITE FILE_PATH="coverage/phone_extract$ccb_function.coverage" NAME="ccb_function Coverage Results" MODIFIED="1585214204606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/function" />
-    <SUITE FILE_PATH="coverage/phone_extract$main.coverage" NAME="main Coverage Results" MODIFIED="1585200086088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/phone_extract$main.coverage" NAME="main Coverage Results" MODIFIED="1585274657042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

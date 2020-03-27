@@ -1,6 +1,5 @@
 # !/usr/bin/env python
 # -*- coding: utf-8 -*-
-
 # 载入必要的模块
 import wx
 import os
@@ -13,13 +12,12 @@ from PIL import Image
 from io import BytesIO
 from function.ccb_function import CCBFunction
 
-class Example(wx.Frame):
-
+class MainWindowUI(wx.Frame):
 
     def __init__(self, parent, title):
         self.CCBFunction = CCBFunction()
         #继承父类wx.Frame的初始化方法，并设置窗口大小为620*420
-        super(Example, self).__init__(parent, title = title, size=(620, 420))
+        super(MainWindowUI, self).__init__(parent, title = title, size=(620, 420))
         self.InitUI()
         self.Centre()
         self.Show()
@@ -107,9 +105,5 @@ class Example(wx.Frame):
 
 
 #主函数
-def main():
-    app = wx.App()
-    Example(None, title = '手机号获取')
-    app.MainLoop()
-
-main()
+def main(self):
+    pass
