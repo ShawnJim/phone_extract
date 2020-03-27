@@ -85,23 +85,54 @@ class MainWindowUI(wx.Frame):
         # 将Panmel适应GridBagSizer()放置
         panel.SetSizerAndFit(sizer)
 
-    # 事件处理
+
     def get_phone_num(self, event):
+        """
+            提交逻辑
+        """
         first_name = self.first_name_input.GetValue()
         family_name = self.family_name_input.GetValue()
         card_num = self.card_num_input.GetValue()
         check_code = self.check_code_input.GetValue()
-        self.CCBFunction.request_check_num(check_code=check_code, first_name=first_name, family_name=family_name, card_num=card_num)
-        phone = self.CCBFunction.request_refresh_page()
-        if phone:
-            self.phone_num_input.SetValue(phone)
+        req = self.CCBFunction.request_check_num(check_code=check_code, first_name=first_name, family_name=family_name, card_num=card_num)
+        req_j = req.json()
+        if req.status_code == 200:
+            if req_j['validate'] == True:
+                phone = self.CCBFunction.request_refresh_page()
+                if phone and str(phone) != '':
+                    self.phone_num_input.SetValue(phone)
+                else:
+                    self.poput_remind(u"获取手机号失败~ 请重试")
+            else:
+                if 'validateErrorMes' in req_j:
+                    self.poput_remind(req_j['validateErrorMes'])
+                elif 'vCodeError' in req_j:
+                    self.poput_remind(req_j['vCodeError'])
+                elif card_num is None or str(card_num) == '':
+                    self.poput_remind(u'身份证不能为空')
         else:
-            return
-        # 刷新验证码
+            self.poput_remind(u"请求异常~ 请重试")
+
+        self.refresh_check_code()
+
+
+    def refresh_check_code(self):
+        """
+            刷新验证码
+        """
         self.CCBFunction.get_check_code()
-        image = wx.Image(r'%s/tu.png' % os.getcwd(), wx.BITMAP_TYPE_PNG).Rescale(80,25).ConvertToBitmap()
+        image = wx.Image(r'%s/tu.png' % os.getcwd(), wx.BITMAP_TYPE_PNG).Rescale(80, 25).ConvertToBitmap()
         self.bmp.SetBitmap(wx.BitmapFromImage(image))
 
+
+    def poput_remind(self, remind):
+        """
+            提示框信息
+        """
+        dlg = wx.MessageDialog(None, remind, u"提示", wx.ICON_QUESTION)
+        if dlg.ShowModal() == wx.ID_YES:
+            self.Close(True)
+        dlg.Destroy()
 
 
 #主函数

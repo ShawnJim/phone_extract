@@ -53,7 +53,7 @@ class CCBFunction(object):
             't': '95fbba187108880d017114e166bf13e4'
         }
         req = requests.post('https://apply.mcard.boc.cn/apply/mobile/mainAppi/getMphoneNo', data=data, headers=self.headers)
-        print(req.text)
+        return req
 
 
     def request_refresh_page(self):
@@ -65,8 +65,6 @@ class CCBFunction(object):
             element = etree.HTML(req.text)
             phone = element.xpath('//input[@name="appiMcMPhone"]/@value')[0]
             return phone
-        else:
-            print("手机号获取失败")
 
 
     def reset_jsessionid(self):
