@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*-
 import base64
 import os
-
 import requests
 import time
 from lxml import etree
+from PIL import Image
+from io import BytesIO
 
 class CCBFunction(object):
 
@@ -30,8 +31,8 @@ class CCBFunction(object):
                 headers=self.headers)
         b_tu = req.content
         # tu_b = base64.b64encode(b_tu)
-        with open('../tu.jpg', 'wb') as f:
-            f.write(b_tu)
+        im = Image.open(BytesIO(b_tu))
+        im.save(r'%s/tu.png' % os.getcwd(), 'PNG')
         return b_tu
 
 
