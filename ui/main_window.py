@@ -99,7 +99,11 @@ class MainWindowUI(wx.Frame):
         if req.status_code == 200:
             if req_j['validate'] == True:
                 phone = self.CCBFunction.request_refresh_page()
-                if phone and str(phone) != '':
+                if not (phone and str(phone) != '') and 'validateErrorMes' in req_j:
+                    self.poput_remind(req_j['validateErrorMes'])
+                elif not (phone and str(phone) != '') and 'vCodeError' in req_j:
+                    self.poput_remind(req_j['vCodeError'])
+                elif phone and str(phone) != '':
                     self.phone_num_input.SetValue(phone)
                 else:
                     self.poput_remind(u"获取手机号失败~ 请重试")
